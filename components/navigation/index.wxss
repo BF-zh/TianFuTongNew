@@ -1,0 +1,12 @@
+.my-navigation{
+  --background:"#fff";
+  height: var(--heigth);
+  padding-top: var(--statusBarHeight);
+  background-color: var(--background);
+  position: fixed;
+  z-index: 99;
+  left: 0;
+  top: 0;
+  box-sizing:border-box;
+  width: 100%;
+}

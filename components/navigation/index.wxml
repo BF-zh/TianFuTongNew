@@ -1,0 +1,5 @@
+<view class="my-navigation" 
+style="--heigth:{{navigation.height+navigation.statusBarHeight}}px;--statusBarHeight:{{navigation.statusBarHeight}}px;--background:{{background}};padding-right: {{isHome?navigation.menuButton.width+(navigation.width-navigation.menuButton.right)*2:0}}px;">
+<slot></slot>
+</view>
+<view style="height: {{navigation.height+navigation.statusBarHeight}}px;" />

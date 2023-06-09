@@ -1,0 +1,34 @@
+<!--pages/home/index.wxml-->
+<my-navigation background="rgba(255,255,255,{{opacity}})">
+  <view style="color:{{navigationColor}}" class="flex items-center h-full justify-center">
+    四川天府健康通
+  </view>
+</my-navigation>
+<image src="/static/bg.png" class="bg" mode="" />
+<view style="margin-top: 200rpx;" id="main">
+  <view class="m-md radius-sm bg-white py-sm overflow-hidden">
+    <van-notice-bar speed="100" scrollable background="#fff" left-icon="/static/logo.png" color="#000" text="除了直接扫码,还有那些地方可以做核酸" />
+  </view>
+  <view class="bg-white mt-md mx-md radius-sm">
+    <view class="p-2xl bb-1 dashed">
+      <text class="text-xl">您好</text>
+    </view>
+    <view class="dot flex column items-center gap-sm c-primary px-md" style="padding: 50px 0;">
+      <van-icon size="3em" name="qr" />
+      <text class="text-xl">出示我的健康码</text>
+      <text class="c-secondary">填报信息获取健康码</text>
+    </view>
+  </view>
+  <view class="bg-white grid column-3 radius-sm mt-md mx-md p-md">
+    <view class="p-md flex column align-center" wx:for="{{list}}" wx:key="index">
+      <van-image width="3em" height="3em" src="{{item.src}}" />
+      <text class="f-w-500 text-sm">{{item.text}}</text>
+    </view>
+  </view>
+  <view class="mt-md flex column align-center bg-white radius-sm mx-md p-md">
+   <text>境外人士（含港澳台）塡報入口</text>
+   <text class="text-sm">Declaration entry for foreign nationals,Hong Kong,Macao and Taiwan residents.</text>
+   <van-button block type="default">默认按钮</van-button>
+  </view>
+  
+</view>
