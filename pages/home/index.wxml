@@ -28,7 +28,9 @@
   <view class="mt-md flex column align-center bg-white radius-sm mx-md p-md">
    <text>境外人士（含港澳台）塡報入口</text>
    <text class="text-sm">Declaration entry for foreign nationals,Hong Kong,Macao and Taiwan residents.</text>
-   <van-button block type="default">默认按钮</van-button>
+   <view class="my-md">
+    <van-button block plian color="var(--primary-color)">默认按钮</van-button>
+   </view>
   </view>
   
 </view>
