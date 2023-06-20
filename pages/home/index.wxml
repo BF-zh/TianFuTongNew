@@ -29,8 +29,13 @@
    <text>境外人士（含港澳台）塡報入口</text>
    <text class="text-sm">Declaration entry for foreign nationals,Hong Kong,Macao and Taiwan residents.</text>
    <view class="my-md">
-    <van-button block plian color="var(--primary-color)">默认按钮</van-button>
+    <van-button block plain color="var(--primary-color)">点击进入 / Clcik Here</van-button>
    </view>
   </view>
-  
+</view>
+<view style="background: rgba(0, 0, 0, .2);" class="m-md p-md align-center c-secondary radius-sm">
+  <text>切换关怀模式</text>
+</view>
+<view class="align-center text-sm c-white">
+  <text>常见问腿</text>
 </view>
