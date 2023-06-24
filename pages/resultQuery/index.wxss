@@ -1,0 +1,4 @@
+/* pages/resultQuery/index.wxss */
+.bg{
+  background: linear-gradient(to bottom,#ffffff,#f5f6f8);
+}

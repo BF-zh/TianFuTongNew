@@ -1,13 +1,19 @@
-lockfileVersion: 5.4
-
-specifiers:
-  '@vant/weapp': ^1.10.19
+lockfileVersion: '6.0'
 
 dependencies:
-  '@vant/weapp': 1.10.19
+  '@vant/weapp':
+    specifier: ^1.10.19
+    version: 1.10.19
+  weapp-qrcode-canvas-2d:
+    specifier: ^1.1.2
+    version: 1.1.2
 
 packages:
 
-  /@vant/weapp/1.10.19:
+  /@vant/weapp@1.10.19:
     resolution: {integrity: sha512-RStOPlSELi9lqim9dGagguViUVMNnfZaEceZ248JZgPjn5TzL2nwwHGWl9VI69SBPC+5MPS+LXm7Z4jcdscFeg==}
+    dev: false
+
+  /weapp-qrcode-canvas-2d@1.1.2:
+    resolution: {integrity: sha512-HQef+xpZiiWDcq8aLZdXnVdNljoYsEWiEKiBYnAnfgqXTeYfC8ApzoB9pMI5mnPFbhtu5xCi8oId1g/86uUl8Q==}
     dev: false

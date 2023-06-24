@@ -2,45 +2,33 @@
 page {
   --primary-color: #3858e6;
   --secondary-color: #a7a6a6;
+  --succsee-color:#51a266;
   --border-color:#939aa0;
   --link-color: #4c86e3;
+  --color-error:#ef3232;
   --xs: 3.25px;
   --md: 15px;
   --sm: 7.5px;
   --xl: 20px;
   --xxl: 25px;
   padding-bottom: 30px;
-  background-color: var(--primary-color);
+  background-color: #f6f7f9;
 }
 view{
   box-sizing: border-box;
 }
-.f-w-100{
-  font-weight: 100;
+
+.f-w-normal{
+  font-weight: normal;
 }
-.f-w-200{
-  font-weight: 200;
+.f-w-bold{
+  font-weight: bold;
 }
-.f-w-300{
-  font-weight: 300;
+.f-w-bolder{
+  font-weight: bolder;
 }
-.f-w-400{
-  font-weight: 400;
-}
-.f-w-500{
-  font-weight: 500;
-}
-.f-w-600{
-  font-weight: 600;
-}
-.f-w-700{
-  font-weight: 700;
-}
-.f-w-800{
-  font-weight: 800;
-}
-.f-w-900{
-  font-weight: 900;
+.f-w-lighter{
+  font-weight: lighter;
 }
 .text-xs{
   font-size: x-small;
@@ -65,13 +53,6 @@ view{
   font-size: xx-large;
 }
 
-.c-white {
-  color: white;
-}
-
-.c-block {
-  color: black;
-}
 
 .p-md {
   padding: var(--md);
@@ -368,20 +349,184 @@ view{
   text-align: start;
 }
 
+.radius-xs {
+  border-radius: var(--xs);
+}
+
+.radius-t-xs {
+  border-radius: var(--xs) var(--xs) 0 0;
+}
+
+.radius-l-xs {
+  border-radius: var(--xs) 0 0 var(--xs);
+}
+
+.radius-r-xs {
+  border-radius: 0 var(--xs) var(--xs) 0;
+}
+
+.radius-b-xs {
+  border-radius: 0 0 var(--xs) var(--xs);
+}
+
+.radius-t-l-xs {
+  border-radius: var(--xs) 0 0 0;
+}
+
+.radius-t-r-xs {
+  border-radius: 0 var(--xs) 0 0;
+}
+
+.radius-b-l-xs {
+  border-radius: 0 0 0 var(--xs);
+}
+
+.radius-b-r-xs {
+  border-radius: 0 0 var(--xs) 0;
+}
+
 .radius-sm {
   border-radius: var(--sm);
+}
+
+.radius-t-sm {
+  border-radius: var(--sm) var(--sm) 0 0;
+}
+
+.radius-l-sm {
+  border-radius: var(--sm) 0 0 var(--sm);
+}
+
+.radius-r-sm {
+  border-radius: 0 var(--sm) var(--sm) 0;
+}
+
+.radius-b-sm {
+  border-radius: 0 0 var(--sm) var(--sm);
+}
+
+.radius-t-l-sm {
+  border-radius: var(--sm) 0 0 0;
+}
+
+.radius-t-r-sm {
+  border-radius: 0 var(--sm) 0 0;
+}
+
+.radius-b-l-sm {
+  border-radius: 0 0 0 var(--sm);
+}
+
+.radius-b-r-sm {
+  border-radius: 0 0 var(--sm) 0;
 }
 
 .radius-md {
   border-radius: var(--md);
 }
 
+.radius-t-md {
+  border-radius: var(--md) var(--md) 0 0;
+}
+
+.radius-l-md {
+  border-radius: var(--md) 0 0 var(--md);
+}
+
+.radius-r-md {
+  border-radius: 0 var(--md) var(--md) 0;
+}
+
+.radius-b-md {
+  border-radius: 0 0 var(--md) var(--md);
+}
+
+.radius-t-l-md {
+  border-radius: var(--md) 0 0 0;
+}
+
+.radius-t-r-md {
+  border-radius: 0 var(--md) 0 0;
+}
+
+.radius-b-l-md {
+  border-radius: 0 0 0 var(--md);
+}
+
+.radius-b-r-md {
+  border-radius: 0 0 var(--md) 0;
+}
+
 .radius-xl {
   border-radius: var(--xl);
 }
 
+.radius-t-xl {
+  border-radius: var(--xl) var(--xl) 0 0;
+}
+
+.radius-l-xl {
+  border-radius: var(--xl) 0 0 var(--xl);
+}
+
+.radius-r-xl {
+  border-radius: 0 var(--xl) var(--xl) 0;
+}
+
+.radius-b-xl {
+  border-radius: 0 0 var(--xl) var(--xl);
+}
+
+.radius-t-l-xl {
+  border-radius: var(--xl) 0 0 0;
+}
+
+.radius-t-r-xl {
+  border-radius: 0 var(--xl) 0 0;
+}
+
+.radius-b-l-xl {
+  border-radius: 0 0 0 var(--xl);
+}
+
+.radius-b-r-xl {
+  border-radius: 0 0 var(--xl) 0;
+}
+
 .radius-2xl {
   border-radius: var(--xxl);
+}
+
+.radius-t-2xl {
+  border-radius: var(--xxl) var(--xxl) 0 0;
+}
+
+.radius-l-2xl {
+  border-radius: var(--xxl) 0 0 var(--xxl);
+}
+
+.radius-r-2xl {
+  border-radius: 0 var(--xxl) var(--xxl) 0;
+}
+
+.radius-b-2xl {
+  border-radius: 0 0 var(--xxl) var(--xxl);
+}
+
+.radius-t-l-2xl {
+  border-radius: var(--xxl) 0 0 0;
+}
+
+.radius-t-r-2xl {
+  border-radius: 0 var(--xxl) 0 0;
+}
+
+.radius-b-l-2xl {
+  border-radius: 0 0 0 var(--xxl);
+}
+
+.radius-b-r-2xl {
+  border-radius: 0 0 var(--xxl) 0;
 }
 
 .radius-full {
@@ -520,6 +665,21 @@ view{
 
 .c-link {
   color: var(--link-color);
+}
+.c-white {
+  color: white;
+}
+
+.c-block {
+  color: black;
+}
+
+.c-error{
+  color: var(--color-error);
+}
+
+.c-success{
+  color: var(--succsee-color);
 }
 
 .ellipsis {
@@ -679,6 +839,9 @@ view{
 .bg-primary{
   background-color: var(--primary-color);
 }
+.bg-secondary{
+  background-color: var(--secondary-color);
+}
 
 .triangle{
   --c:var(--secondary-color);
@@ -689,4 +852,7 @@ view{
   border-left: var(--size) solid transparent;
   border-bottom: var(--size) solid var(--c);
   transform: rotate(45deg);
+}
+.checkbox-custom-class{
+  align-items:flex-start !important;
 }

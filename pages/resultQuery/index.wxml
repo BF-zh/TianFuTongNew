@@ -1,0 +1,27 @@
+<!--pages/resultQuery/index.wxml-->
+<view class=" p-md bg">
+  <view>
+    <text>查询人员</text>
+  </view>
+  <view class=" flex justify-between bb-1 pb-md solid">
+    <view class="flex gap-md">
+      <text>袁明星</text>
+      <text>511523200208133857</text>
+    </view>
+    <text class="c-link">切换</text>
+  </view>
+</view>
+<view class="mx-md">
+  <view class="flex gap-xs justify-between">
+    <text bindtap="handleClickTab" data-active="{{0}}" style="opacity: {{active===0?1:.5}};" class="bg-primary w-full p-sm c-white align-center radius-t-sm">省内核酸结果</text>
+    <text bindtap="handleClickTab" data-active="{{1}}" style="opacity: {{active===1?1:.5}};" class="bg-primary w-full p-sm c-white align-center radius-t-sm">国内和核算结果</text>
+  </view>
+  <view class="bg-white">
+    <van-empty description="未查询到你的检测结果" />
+  </view>
+</view>
+<view class="flex column m-md gap-sm c-secondary">
+  <text class="c-block f-w-bold text-l">服务说明：</text>
+  <text>1.本服务支持查询本人14日内核酸检测结果。</text>
+  <text>2.相关查询结果基于卫生健康部门数据库，根据各地检测数据提供，正在不断汇聚更新中。</text>
+</view>

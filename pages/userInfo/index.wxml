@@ -1,0 +1,33 @@
+<!--pages/userInfo/index.wxml-->
+<view class="bg-white p-md text-xl f-w-bold">
+  <text>{{name}}</text>
+</view>
+<view class="bg-white p-md text-xl f-w-bold">
+  <text>基本信息</text>
+</view>
+<view class="bg-white flex justify-between p-md">
+  <text style="width: 100px;">电话</text>
+  <text class="flex-1">156****115</text>
+  <view class="c-link align-end">
+    <van-icon name="edit" />
+    <text>更换</text>
+  </view>
+</view>
+<view class="bg-white flex justify-between p-md">
+  <text style="width: 100px;">身份证号</text>
+  <text class="flex-1">{{idNumber}}</text>
+</view>
+<view class="bg-white flex justify-between p-md">
+  <text style="width: 100px;">居住地址</text>
+  <text class="flex-1">四川省******************</text>
+</view>
+<view class="bg-white mt-md">
+  <view class="flex justify-between p-md">
+    <text>最近的申报信息</text>
+    <van-icon name="arrow"/>
+  </view>
+  <view class="flex justify-between p-md">
+    <text>登陆设置</text>
+    <van-icon name="arrow"/>
+  </view>
+</view>

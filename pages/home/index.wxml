@@ -10,30 +10,81 @@
     <van-notice-bar speed="100" scrollable background="#fff" left-icon="/static/logo.png" color="#000" text="除了直接扫码,还有那些地方可以做核酸" />
   </view>
   <view class="bg-white mt-md mx-md radius-sm">
-    <view class="p-2xl bb-1 dashed">
-      <text class="text-xl">您好</text>
+    <view class="p-md bb-1 dashed">
+      <view class="flex justify-between items-center">
+        <view class="flex column justify-center">
+          <text class="text-xl">{{name||'你好'}}</text>
+          <text wx:if="{{idNumber}}" class="c-secondary">{{idNumber}}</text>
+        </view>
+        <view wx:if="{{name}}" class="flex gap-md">
+          <view class="flex column items-center" bindtap="handleToUserInfo">
+            <van-image width="1.3em" height="1.3em" src="/static/user.png" />
+            <text class="text-sm c-secondary">个人信息</text>
+          </view>
+          <view class="flex column items-center">
+            <van-image width="1.3em" height="1.3em" src="/static/users.png" />
+            <text class="text-sm c-secondary">家庭码</text>
+          </view>
+        </view>
+      </view>
     </view>
-    <view class="dot flex column items-center gap-sm c-primary px-md" style="padding: 50px 0;">
-      <van-icon size="3em" name="qr" />
-      <text class="text-xl">出示我的健康码</text>
-      <text class="c-secondary">填报信息获取健康码</text>
+    <view class="dot p-md">
+      <view wx:if="{{showQr}}">
+        <view style="padding: 0 50px;" class="flex column gap-xs items-center w-full">
+          <view class="flex justify-between items-baseline c-primary f-w-bold w-full">
+            <view>
+              <text>{{time.hours}}:{{time.minutes}}:</text><text class="text-xl">{{time.seconds}}</text>
+            </view>
+            <text>{{time.year}}-{{time.month}}-{{time.day}}</text>
+          </view>
+          <canvas style="width: 150px; height: 150px;z-index: 1;" canvas-id="myQrcode" id="myQrcode" type="2d"></canvas>
+          <text class="c-success text-xs">绿码：健康状态为低风险</text>
+          <view bindtap="handleOpenScan" class="bg-primary w-full radius-full p-sm flex gap-sm justify-center c-white">
+            <van-icon name="scan" />
+            <text>扫场所码</text>
+            <van-icon name="arrow" />
+          </view>
+        </view>
+        <view class="mx-sm my-md overflow-hidden">
+          <view class="flex marquee gap-xs">
+            <view wx:for="{{40}}" wx:key="index" style="--w:calc(100% / 40);--o:{{(item%3+1)/10*3}}" class="marquee-item"></view>
+          </view>
+        </view>
+        <view class="grid column-2 gap-xs">
+          <view class="flex column gap-xs c-white text-sm bg-secondary radius-sm p-sm">
+            <text>省内核酸检测结果：</text>
+            <text class="text-xs">仅显示72小时内核酸</text>
+            <text class="bg-white c-primary align-center radius-md">点击更新</text>
+          </view>
+          <view class="flex column gap-xs c-white text-sm bg-secondary radius-sm p-sm">
+            <text>风险城市旅居史</text>
+            <text class="text-xs">待核验</text>
+          </view>
+        </view>
+      </view>
+      <view wx:else style="padding: 50px 0;" class=" flex column items-center gap-sm c-primary px-md" bindtap="handleToLogin">
+        <van-icon size="3em" name="qr" />
+        <text class="text-xl f-w-bold">出示我的健康码</text>
+        <text class="c-secondary">填报信息获取健康码</text>
+      </view>
     </view>
   </view>
   <view class="bg-white grid column-3 radius-sm mt-md mx-md p-md">
-    <view class="p-md flex column align-center" wx:for="{{list}}" wx:key="index">
+    <view class="p-md flex column align-center" data-item="{{item}}" bindtap="handleListItem" wx:for="{{list}}" wx:key="index">
       <van-image width="3em" height="3em" src="{{item.src}}" />
-      <text class="f-w-500 text-sm">{{item.text}}</text>
+      <text class="f-w-bold text-sm">{{item.text}}</text>
     </view>
   </view>
   <view class="mt-md flex column align-center bg-white radius-sm mx-md p-md">
-   <text>境外人士（含港澳台）塡報入口</text>
-   <text class="text-sm">Declaration entry for foreign nationals,Hong Kong,Macao and Taiwan residents.</text>
-   <view class="my-md">
-    <van-button block plain color="var(--primary-color)">点击进入 / Clcik Here</van-button>
-   </view>
+    <text>境外人士（含港澳台）塡報入口</text>
+    <text class="text-sm">Declaration entry for foreign nationals,Hong Kong,Macao and Taiwan residents.</text>
+    <view class="my-md">
+      <van-button block plain color="var(--primary-color)">点击进入 / Clcik Here</van-button>
+    </view>
   </view>
 </view>
-<view style="background: rgba(0, 0, 0, .2);" class="m-md p-md align-center c-secondary radius-sm">
+<view style="background: rgba(0, 0, 0, .2);" class="flex  justify-center gap-sm items-center p-md m-md c-secondary radius-sm">
+  <van-image width="1.3em" height="1.3em" src="/static/reflash.svg" />
   <text>切换关怀模式</text>
 </view>
 <view class="align-center text-sm c-white">

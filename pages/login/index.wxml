@@ -1,0 +1,36 @@
+<!--pages/login/index.wxml-->
+<view class="text-2xl f-w-bold flex column items-center">
+  <van-image width="5em" height="5em" src="/static/logo.png" />
+  <text>请先登陆账号</text>
+  <text class="text-md c-secondary">登陆后可查看健康码信息</text>
+</view>
+<view class="m-md p-md">
+    <van-checkbox shape="square" value="{{ active }}" bind:change="onChange" custom-class="checkbox-custom-class">
+    我已同意并阅读
+    <text class="c-link">用户服务协议</text>
+    及
+    <text class="c-link">隐私政策</text>
+  </van-checkbox>
+</view>
+<view class="m-md p-xl align-center bg-primary radius-sm c-white f-w-bolder" bindtap="handleToLogin">
+  <text>登陆</text>
+</view>
+<view style="bottom: 50px;" class="w-full fixed flex column items-center gap-xs c-secondary">
+  <text>四川省应对新型冠状病毒肺炎</text>
+  <text>疫情应急指挥部</text>
+  <text>四川省大数据中心提供支持</text>
+</view>
+<van-dialog
+  use-slot
+  show="{{ showDialog }}"
+  show-cancel-button
+  confirm-button-open-type="getUserInfo"
+  bind:close="onClose"
+  bind:getuserinfo="getUserInfo"
+>
+<view class="px-md py-2xl">
+  我已同意并阅读
+    <text class="c-link">用户服务协议</text>
+    及
+    <text class="c-link">隐私政策</text></view>
+</van-dialog>

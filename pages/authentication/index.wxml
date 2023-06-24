@@ -1,0 +1,40 @@
+<!--pages/authentication/index.wxml-->
+<view class="m-md  bg-white text-xl">
+  <view class="pt-md">
+    <text class="px-md f-w-bold">姓名</text>
+    <van-field bind:change="handleNameChange" bind:blur="handleNameBlur" input-class="text-xl" model:value="{{name}}" placeholder="请输入姓名" />
+    <text wx:if="{{nameError}}" class="px-md text-l c-error">{{nameError}}</text>
+  </view>
+  <view>
+    <text class="px-md f-w-bold">身份证号</text>
+    <van-field bind:change="handleIdNumberChange" bind:blur="handleIdNumberBlur" input-class="text-xl" type="idcard" model:value="{{idNumber}}" placeholder="请输入姓名" />
+    <text wx:if="{{idNumberError}}" class="px-md text-l c-error">{{idNumberError}}</text>
+  </view>
+</view>
+<view style="padding: 200rpx 0;" class="my-2xl mx-md flex column align-center gap-md justify-center">
+  <van-checkbox shape="square" value="{{ active }}" bind:change="onChange" custom-class="checkbox-custom-class">
+  <view class="align-start">
+    我同意小程序使用我所提交的信息用于身份认证及快捷登录。查看
+    <text class="c-link">用户服务协议</text>
+    及
+    <text class="c-link">隐私政策</text>
+  </view>
+  </van-checkbox>
+  <view bindtap="handleSubmit" class="py-md bg-primary c-white f-w-bold">
+    <text>开始认证</text>
+  </view>
+</view>
+<van-notify id="van-notify" />
+<van-dialog
+  use-slot
+  show="{{ showDialog }}"
+  show-cancel-button
+  bind:cancel="handleCancel"
+  bind:confirm="handleConfirm"
+>
+<view class="px-md py-2xl">
+  我已同意并阅读
+    <text class="c-link">用户服务协议</text>
+    及
+    <text class="c-link">隐私政策</text></view>
+</van-dialog>

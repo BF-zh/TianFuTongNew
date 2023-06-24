@@ -1,20 +1,38 @@
 {
   "pages":[
-    "pages/home/index"
+    "pages/home/index",
+    "pages/login/index",
+    "pages/userInfo/index",
+    "pages/resultQuery/index",
+    "pages/placeQuery/index",
+    "pages/authentication/index"
+    
   ],
   "usingComponents": {
     "my-navigation":"/components/navigation/index",
     "van-icon": "@vant/weapp/icon/index",
     "van-notice-bar": "@vant/weapp/notice-bar/index",
     "van-image": "@vant/weapp/image/index",
-    "van-button": "@vant/weapp/button/index"
+    "van-button": "@vant/weapp/button/index",
+    "van-empty": "@vant/weapp/empty/index",
+    "van-checkbox": "@vant/weapp/checkbox/index",
+    "van-dialog": "@vant/weapp/dialog/index",
+    "van-field": "@vant/weapp/field/index",
+    "van-notify": "@vant/weapp/notify/index"
   },
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "Weixin",
-    "navigationBarTextStyle":"black",
-    "navigationStyle": "custom"
+    "navigationBarTextStyle":"black"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "用于获取用户位置信息"
+    },
+    "scope.camera": {
+      "desc": "用于进行扫一扫"
+    }
   },
   "sitemapLocation": "sitemap.json"
 }
